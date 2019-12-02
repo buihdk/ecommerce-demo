@@ -3,3 +3,6 @@ api-server
 
 # Ignore vendor
 node_modules
+
+# Ignore vscode config
+.vscode
