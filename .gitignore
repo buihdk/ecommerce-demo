@@ -6,3 +6,6 @@ node_modules
 
 # Ignore vscode config
 .vscode
+
+# Ignore yarn.lock (for now)
+client/yarn.lock
