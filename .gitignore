@@ -1,2 +1,5 @@
 # Ignore api-server directory
 api-server
+
+# Ignore vendor
+node_modules
