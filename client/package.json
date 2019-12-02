@@ -4,5 +4,10 @@
   "description": "The app is created for the Mercari frontend skill test.",
   "main": "index.js",
   "author": "contact@buihdk.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
 }
