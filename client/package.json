@@ -1,0 +1,8 @@
+{
+  "name": "client-app",
+  "version": "1.0.0",
+  "description": "The app is created for the Mercari frontend skill test.",
+  "main": "index.js",
+  "author": "contact@buihdk.com",
+  "license": "MIT"
+}
