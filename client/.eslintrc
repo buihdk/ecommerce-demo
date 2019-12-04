@@ -22,11 +22,12 @@
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
-    "react/jsx-indent": 0,
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
     "no-unused-vars": [2, { "args": "none" }],
-    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }]
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-indent": 0,
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
     "flowtype": {
