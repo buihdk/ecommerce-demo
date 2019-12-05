@@ -10,12 +10,11 @@
   "extends": [
     "airbnb",
     "eslint:recommended",
-    "plugin:flowtype/recommended",
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["flowtype", "prettier", "import", "react-hooks"],
+  "plugins": ["prettier", "import", "react-hooks"],
   "rules": {
     "global-require": 0,
     "import/extensions": 0,
@@ -29,9 +28,4 @@
     "react/jsx-indent": 0,
     "react/jsx-props-no-spreading": "off"
   },
-  "settings": {
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": true
-    }
-  }
 }
