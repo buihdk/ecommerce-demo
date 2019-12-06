@@ -23,9 +23,14 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env'] },
+        exclude: /node_modules/,
+        include: /src/,
+      },
+      {
+        test: /\.(js|jsx)$/,
+        use: 'react-hot-loader/webpack',
+        include: /node_modules/,
       },
       {
         test: /\.css$/,

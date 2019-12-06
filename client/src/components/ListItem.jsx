@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 
-import api from '../services';
 import Item from './Item';
 
-const ListItem = () => {
-  const [items, setItems] = useState([]);
+const ListItem = ({ items }) => (
+  <div>{items && items.map(item => <Item key={item.id} item={item} />)}</div>
+);
 
-  useEffect(() => {
-    api.fetchItems().then(res => setItems(res.data.slice(0, 5))); // get only 5 items
-  }, []);
-
-  return (
-    <div>{items && items.map(item => <Item key={item.id} {...item} />)}</div>
-  );
+ListItem.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object),
 };
 
-ListItem.propTypes = {};
+ListItem.defaultProps = {
+  items: [],
+};
 
-export default ListItem;
+export default memo(ListItem);

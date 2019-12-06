@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { memo, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-const ItemPage = () => <h2>ItemPage</h2>;
+import api from '../services';
+import Item from '../components/Item';
 
-export default ItemPage;
+const ItemPage = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    api.fetchItemById(id).then(res => setItem(res));
+  }, [id]);
+
+  return <Item item={item} />;
+};
+
+export default memo(ItemPage);

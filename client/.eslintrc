@@ -27,5 +27,5 @@
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-indent": 0,
     "react/jsx-props-no-spreading": "off"
-  },
+  }
 }
