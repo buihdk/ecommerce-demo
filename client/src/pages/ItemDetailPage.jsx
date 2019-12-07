@@ -2,9 +2,9 @@ import React, { memo, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import api from '../services';
-import Item from '../components/Item';
+import ItemDetail from '../components/ItemDetail';
 
-const ItemPage = () => {
+const ItemDetailPage = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
 
@@ -12,7 +12,7 @@ const ItemPage = () => {
     api.fetchItemById(id).then(res => setItem(res));
   }, [id]);
 
-  return <Item item={item} />;
+  return <ItemDetail item={item} isItemPage />;
 };
 
-export default memo(ItemPage);
+export default memo(ItemDetailPage);

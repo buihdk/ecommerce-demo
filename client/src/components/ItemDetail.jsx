@@ -21,9 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Item = props => {
-  console.log(props);
-  const { item } = props;
+const ItemDetail = ({ item, isItemPage }) => {
   const classes = useStyles();
 
   return (
@@ -44,19 +42,21 @@ const Item = props => {
           <Favorite fontSize="small" />
           {item.like_count}
         </CardContent>
-        <Link
-          to={{
-            pathname: `item/${item.id}`,
-          }}
-        >
-          <Button size="small">Learn More</Button>
-        </Link>
+        {!isItemPage && (
+          <Link
+            to={{
+              pathname: `items/${item.id}`,
+            }}
+          >
+            <Button size="small">Learn More</Button>
+          </Link>
+        )}
       </CardActionArea>
     </Card>
   );
 };
 
-Item.propTypes = {
+ItemDetail.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
@@ -65,9 +65,10 @@ Item.propTypes = {
     price: PropTypes.number,
     like_count: PropTypes.number,
   }),
+  isItemPage: PropTypes.bool,
 };
 
-Item.defaultProps = {
+ItemDetail.defaultProps = {
   item: {
     id: '',
     image: '',
@@ -76,6 +77,7 @@ Item.defaultProps = {
     price: 0,
     like_count: 0,
   },
+  isItemPage: false,
 };
 
-export default memo(Item);
+export default memo(ItemDetail);

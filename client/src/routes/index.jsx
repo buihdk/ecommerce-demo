@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
-const ListItemPage = lazy(() => import('../pages/ListItemPage'));
-const ItemPage = lazy(() => import('../pages/ItemPage'));
+const ItemListPage = lazy(() => import('../pages/ItemListPage'));
+const ItemDetailPage = lazy(() => import('../pages/ItemDetailPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
 const Routes = () => (
@@ -13,7 +13,7 @@ const Routes = () => (
           <Link to="/">List Item</Link>
         </li>
         <li>
-          <Link to="/item/:id">Item</Link>
+          <Link to="/items/:id">Item</Link>
         </li>
         <li>
           <Link to="/404">Not Found</Link>
@@ -25,9 +25,13 @@ const Routes = () => (
         <Route
           exact
           path="/"
-          component={props => <ListItemPage {...props} />}
+          component={props => <ItemListPage {...props} />}
         />
-        <Route path="/item/:id" component={props => <ItemPage {...props} />} />
+        <Route
+          exact
+          path="/items/:id"
+          component={props => <ItemDetailPage {...props} />}
+        />
         <Route path="/404" component={props => <NotFoundPage {...props} />} />
       </Switch>
     </Suspense>
