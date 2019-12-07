@@ -15,6 +15,21 @@ import { Favorite } from '@material-ui/icons';
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
+    position: 'relative',
+  },
+  soldRibbon: {
+    position: 'absolute',
+    top: -16,
+    left: -82,
+    zIndex: 100,
+    backgroundColor: '#e43',
+    color: 'white',
+    width: 200,
+    lineHeight: '26px',
+    paddingTop: 36,
+    textAlign: 'center',
+    letterSpacing: 3,
+    transform: 'rotate(-45deg)',
   },
   media: {
     height: 140,
@@ -22,14 +37,15 @@ const useStyles = makeStyles({
 });
 
 const ItemDetail = ({ item, isItemPage }) => {
-  const classes = useStyles();
+  const styles = useStyles();
   if (!item) return <h2>Item does not exist</h2>;
 
   return (
-    <Card className={classes.card}>
+    <Card className={styles.card}>
+      {item.is_sold_out && <span className={styles.soldRibbon}>SOLD</span>}
       <CardActionArea>
         <CardMedia
-          className={classes.media}
+          className={styles.media}
           image={item.image}
           title={item.name}
         />
@@ -60,6 +76,7 @@ const ItemDetail = ({ item, isItemPage }) => {
 ItemDetail.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
+    is_sold_out: PropTypes.bool,
     image: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
