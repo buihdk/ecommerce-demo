@@ -48,11 +48,7 @@ const ItemList = ({ items }) => {
               <span className={styles.soldRibbon}>SOLD</span>
             )}
             <CardActionArea>
-              <CardMedia
-                className={styles.media}
-                image={item.image}
-                title={item.name}
-              />
+              <CardMedia className={styles.media} image={item.image} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   {item.description}
