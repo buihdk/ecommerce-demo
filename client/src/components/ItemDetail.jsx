@@ -1,34 +1,13 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import {
-  makeStyles,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
-} from '@material-ui/core';
-import { Favorite } from '@material-ui/icons';
+import { makeStyles, CardMedia } from '@material-ui/core';
 
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
     position: 'relative',
   },
-  soldRibbon: {
-    position: 'absolute',
-    top: -16,
-    left: -82,
-    zIndex: 100,
-    backgroundColor: '#e43',
-    color: 'white',
-    width: 200,
-    lineHeight: '26px',
-    paddingTop: 36,
-    textAlign: 'center',
-    letterSpacing: 3,
-    transform: 'rotate(-45deg)',
-  },
+
   media: {
     height: 140,
   },
@@ -39,26 +18,18 @@ const ItemDetail = ({ item }) => {
   if (!item) return <h2>Item does not exist</h2>;
 
   return (
-    <Card className={styles.card}>
-      {item.is_sold_out && <span className={styles.soldRibbon}>SOLD</span>}
-      <CardActionArea>
-        <CardMedia
-          className={styles.media}
-          image={item.image}
-          title={item.name}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {item.description}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {`¥ ${item.price}`}
-          </Typography>
-          <Favorite fontSize="small" />
-          {item.like_count}
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <>
+      {item.name}
+      <CardMedia className={styles.media} image={item.image} />
+      {item.name}
+      <br />
+      {item.like_count}
+      <br />
+      {item.description}
+      <br />
+      {`¥ ${item.price}`}
+      {item.shipping_fee}
+    </>
   );
 };
 
@@ -71,6 +42,7 @@ ItemDetail.propTypes = {
     description: PropTypes.string,
     price: PropTypes.number,
     like_count: PropTypes.number,
+    shipping_fee: PropTypes.string,
   }),
 };
 
@@ -83,6 +55,7 @@ ItemDetail.defaultProps = {
     description: '',
     price: 0,
     like_count: 0,
+    shipping_fee: '',
   },
 };
 
