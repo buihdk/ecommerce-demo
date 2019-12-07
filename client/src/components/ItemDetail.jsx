@@ -1,15 +1,25 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, CardMedia } from '@material-ui/core';
+import { makeStyles, CardMedia, Chip } from '@material-ui/core';
+import { FavoriteBorder } from '@material-ui/icons';
 
 const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-    position: 'relative',
-  },
-
   media: {
     height: 140,
+  },
+  icon: {
+    fontSize: 16,
+  },
+  likeContainer: {
+    marginTop: 16,
+    marginBottom: 8,
+  },
+  likeCount: {
+    color: 'darkgrey',
+    fontWeight: 600,
+    lineHeight: '32px',
+    display: 'inline-block',
+    marginLeft: '4px',
   },
 });
 
@@ -22,9 +32,13 @@ const ItemDetail = ({ item }) => {
       {item.name}
       <CardMedia className={styles.media} image={item.image} />
       {item.name}
-      <br />
-      {item.like_count}
-      <br />
+      <div className={styles.likeContainer}>
+        <Chip
+          label="いいね!"
+          icon={<FavoriteBorder className={styles.icon} />}
+        />
+        <span className={styles.likeCount}>{item.like_count}</span>
+      </div>
       {item.description}
       <br />
       {`¥ ${item.price}`}
