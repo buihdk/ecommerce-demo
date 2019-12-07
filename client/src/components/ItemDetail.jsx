@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import {
   makeStyles,
   Card,
@@ -8,7 +7,6 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  Button,
 } from '@material-ui/core';
 import { Favorite } from '@material-ui/icons';
 
@@ -36,7 +34,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ItemDetail = ({ item, isItemPage }) => {
+const ItemDetail = ({ item }) => {
   const styles = useStyles();
   if (!item) return <h2>Item does not exist</h2>;
 
@@ -59,15 +57,6 @@ const ItemDetail = ({ item, isItemPage }) => {
           <Favorite fontSize="small" />
           {item.like_count}
         </CardContent>
-        {!isItemPage && (
-          <Link
-            to={{
-              pathname: `items/${item.id}`,
-            }}
-          >
-            <Button size="small">Learn More</Button>
-          </Link>
-        )}
       </CardActionArea>
     </Card>
   );
@@ -83,19 +72,18 @@ ItemDetail.propTypes = {
     price: PropTypes.number,
     like_count: PropTypes.number,
   }),
-  isItemPage: PropTypes.bool,
 };
 
 ItemDetail.defaultProps = {
   item: {
     id: '',
+    is_sold_out: false,
     image: '',
     name: '',
     description: '',
     price: 0,
     like_count: 0,
   },
-  isItemPage: false,
 };
 
 export default memo(ItemDetail);

@@ -12,7 +12,7 @@ const ItemDetailPage = () => {
     api.fetchItemById(id).then(res => setItem(res));
   }, [id]);
 
-  return <ItemDetail item={item} isItemPage />;
+  return <ItemDetail item={item} />;
 };
 
 export default memo(ItemDetailPage);
