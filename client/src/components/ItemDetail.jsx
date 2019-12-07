@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 
 const ItemDetail = ({ item, isItemPage }) => {
   const classes = useStyles();
+  if (!item) return <h2>Item does not exist</h2>;
 
   return (
     <Card className={classes.card}>
@@ -37,7 +38,7 @@ const ItemDetail = ({ item, isItemPage }) => {
             {item.description}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {item.price}
+            {`¥ ${item.price}`}
           </Typography>
           <Favorite fontSize="small" />
           {item.like_count}
