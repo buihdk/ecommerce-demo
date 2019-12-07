@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   soldRibbon: {
     position: 'absolute',
     top: -16,
-    left: -82,
+    left: -84,
     zIndex: 100,
     backgroundColor: '#e43',
     color: 'white',
