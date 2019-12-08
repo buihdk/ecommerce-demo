@@ -4,8 +4,7 @@ import { hot } from 'react-hot-loader/root';
 import { Container } from '@material-ui/core';
 
 import { fetchCategories } from './services/localStorage';
-
-import Routes from './routes';
+import Routes from '../routes';
 
 fetchCategories();
 
