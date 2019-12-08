@@ -11,3 +11,12 @@ Author: **Khoa Bui**
 - [x] Please use the provided API.
 - [x] Please do not use any boilerplate such as create-react-app.
 - [x] Please use English for communication, commit messages and comments.
+
+## Additional implementation
+- [x] Implement a Not Found page for incorrect URLs
+- [x] Implement a View button to navigate to Item Detail page from Item List page
+- [ ] Implement navigation bar
+- [ ] Implement search box for filtering in Item List page
+- [ ] Implement categories for filtering
+- [ ] Implement localization
+- [ ] Update overall layout
