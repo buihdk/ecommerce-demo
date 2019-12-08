@@ -164,12 +164,12 @@ ItemList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      is_sold_out: PropTypes.bool,
       image: PropTypes.string,
       name: PropTypes.string,
       description: PropTypes.string,
       price: PropTypes.number,
       like_count: PropTypes.number,
+      is_sold_out: PropTypes.bool,
     }),
   ),
 };
@@ -178,12 +178,12 @@ ItemList.defaultProps = {
   items: [
     {
       id: '',
-      is_sold_out: false,
       image: '',
       name: '',
       description: '',
       price: 0,
       like_count: 0,
+      is_sold_out: false,
     },
   ],
 };
