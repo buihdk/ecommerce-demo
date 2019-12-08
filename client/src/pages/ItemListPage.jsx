@@ -1,8 +1,9 @@
 import React, { memo, useState, useEffect } from 'react';
 
 import api from '../services';
-import ItemList from '../components/ItemList';
 import ErrorBar from '../utils/ErrorBar';
+
+import ItemList from '../components/ItemList';
 
 const ItemListPage = () => {
   const [response, setResponse] = useState({});
