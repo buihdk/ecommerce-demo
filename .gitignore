@@ -1,0 +1,14 @@
+# Ignore vscode config
+.vscode
+
+# Ignore api-server directory
+api-server
+
+# Ignore vendor
+client/node_modules
+
+# Ignore yarn.lock (for now)
+client/yarn.lock
+
+# Ignore build version
+client/dist
