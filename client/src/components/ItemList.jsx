@@ -59,6 +59,7 @@ const useButtonBase = makeStyles(theme => ({
       },
     },
   },
+  focusVisible: {},
   imageButton: {
     position: 'absolute',
     left: 0,
@@ -120,8 +121,10 @@ const ItemList = ({ items }) => {
                 <Box className={styles.soldRibbon}>SOLD</Box>
               )}
               <ButtonBase
+                focusRipple
                 key={item.name}
                 className={buttonBase.image}
+                focusVisibleClassName={buttonBase.focusVisible}
                 onClick={() => history.push(`items/${item.id}`)}
               >
                 <Box
