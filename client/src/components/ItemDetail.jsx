@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, lazy } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, CardMedia, Chip } from '@material-ui/core';
 import { FavoriteBorder } from '@material-ui/icons';
@@ -25,7 +25,10 @@ const useStyles = makeStyles({
 
 const ItemDetail = ({ item }) => {
   const styles = useStyles();
-  if (!item) return <h2>Item does not exist</h2>;
+  if (!item) {
+    const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+    return <NotFoundPage errorCode={400} />;
+  }
 
   return (
     <>
@@ -50,26 +53,26 @@ const ItemDetail = ({ item }) => {
 ItemDetail.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
-    is_sold_out: PropTypes.bool,
     image: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
+    shipping_fee: PropTypes.string,
     price: PropTypes.number,
     like_count: PropTypes.number,
-    shipping_fee: PropTypes.string,
+    is_sold_out: PropTypes.bool,
   }),
 };
 
 ItemDetail.defaultProps = {
   item: {
     id: '',
-    is_sold_out: false,
     image: '',
     name: '',
     description: '',
+    shipping_fee: '',
     price: 0,
     like_count: 0,
-    shipping_fee: '',
+    is_sold_out: false,
   },
 };
 
