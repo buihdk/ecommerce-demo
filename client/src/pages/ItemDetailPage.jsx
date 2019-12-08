@@ -4,24 +4,27 @@ import { get, find } from 'lodash';
 
 import api from '../services';
 import { getCategories } from '../services/localStorage';
+import ErrorBar from '../utils/ErrorBar';
+
 import ItemDetail from '../components/ItemDetail';
 
 const ItemDetailPage = () => {
   const { id } = useParams();
-  const [item, setItem] = useState({});
+  const [response, setResponse] = useState({});
 
   useEffect(() => {
-    api.fetchItemById(id).then(res => setItem(res));
+    api.fetchItemById(id).then(res => setResponse(res));
   }, [id]);
 
   const categories = useMemo(() => getCategories(), []);
   const categoryName = get(
-    find(categories, category => Number(category.id) === item.category_id),
+    find(categories, category => Number(category.id) === response.category_id),
     'name',
     '',
   );
 
-  return <ItemDetail item={item} categoryName={categoryName} />;
+  if (response.err) return <ErrorBar msg={response.err} />;
+  return <ItemDetail item={response} categoryName={categoryName} />;
 };
 
 export default memo(ItemDetailPage);
