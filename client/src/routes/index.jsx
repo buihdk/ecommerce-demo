@@ -11,9 +11,7 @@ const NotFoundPage = lazy(() => import('../utils/NotFoundPage'));
 
 const Routes = () => (
   <ErrorBoundary
-    fallback={
-      <ErrorBar msg="Could not load routes. Check console for more info." />
-    }
+    fallback={<ErrorBar msg="App has crashed. Check console for more info." />}
   >
     <Suspense fallback={<CircularProgress />}>
       <Switch>
