@@ -5,7 +5,7 @@ import toJSON from 'enzyme-to-json';
 import * as LocalStorage from '../services/localStorage';
 import App from './App';
 
-const fetchCategories = jest
+const fetchCategoriesSpy = jest
   .spyOn(LocalStorage, 'fetchCategories')
   .mockResolvedValue({ data: ['mock'] });
 
@@ -14,6 +14,6 @@ describe('App', () => {
 
   test('renders without crashing', () => {
     expect(toJSON(wrapper)).toMatchSnapshot();
-    expect(fetchCategories).toHaveBeenCalled();
+    expect(fetchCategoriesSpy).toBeCalled();
   });
 });

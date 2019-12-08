@@ -8,7 +8,7 @@ import ItemList, { useHistoryPush } from './ItemList';
 const mockHistory = { push: jest.fn() };
 jest.mock('react-router-dom', () => ({ useHistory: () => mockHistory }));
 
-const items = [
+const mockItems = [
   {
     id: '1',
     image: '1',
@@ -34,14 +34,14 @@ describe(`useHistoryPush`, () => {
     const {
       result: { current: handleClick },
     } = renderHook(() => useHistoryPush(mockHistory));
-    handleClick('1');
+    handleClick('0');
 
-    expect(mockHistory.push).toHaveBeenCalledWith('items/1');
+    expect(mockHistory.push).toBeCalledWith('items/0');
   });
 });
 
 describe('ItemList', () => {
-  const wrapper = shallow(<ItemList items={items} />);
+  const wrapper = shallow(<ItemList items={mockItems} />);
 
   test('renders without crashing', () => {
     expect(toJSON(wrapper)).toMatchSnapshot();
@@ -53,6 +53,6 @@ describe('ItemList', () => {
       .first()
       .simulate('click');
 
-    expect(mockHistory.push).toHaveBeenCalledWith('items/1');
+    expect(mockHistory.push).toBeCalledWith('items/1');
   });
 });

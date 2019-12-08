@@ -2,7 +2,7 @@ import React, { memo, useMemo, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { get, find } from 'lodash';
 
-import api from '../services';
+import { fetchItemById } from '../services';
 import { getCategories } from '../services/localStorage';
 import ErrorBar from '../utils/ErrorBar';
 
@@ -14,7 +14,7 @@ const ItemDetailPage = () => {
   const categories = useMemo(() => getCategories(), []);
 
   useEffect(() => {
-    api.fetchItemById(id).then(resolved => setRes(resolved));
+    fetchItemById(id).then(response => setRes(response));
   }, [id]);
 
   let categoryName;
