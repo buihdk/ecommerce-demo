@@ -8,14 +8,17 @@ import ErrorBar from '../utils/ErrorBar';
 
 import ItemDetail from '../components/ItemDetail';
 
+export const useFetchItemById = (id, setRes) =>
+  useEffect(() => {
+    fetchItemById(id).then(response => setRes(response));
+  }, [id, setRes]);
+
 const ItemDetailPage = () => {
   const { id } = useParams();
   const [res, setRes] = useState({});
   const categories = useMemo(() => getCategories(), []);
 
-  useEffect(() => {
-    fetchItemById(id).then(response => setRes(response));
-  }, [id]);
+  useFetchItemById(id, setRes);
 
   let categoryName;
   if (res && res.category_id) {
