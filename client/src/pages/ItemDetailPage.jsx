@@ -1,6 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container } from '@material-ui/core';
 
 import api from '../services';
 import ItemDetail from '../components/ItemDetail';
@@ -13,11 +12,7 @@ const ItemDetailPage = () => {
     api.fetchItemById(id).then(res => setItem(res));
   }, [id]);
 
-  return (
-    <Container maxWidth="sm">
-      <ItemDetail item={item} />
-    </Container>
-  );
+  return <ItemDetail item={item} />;
 };
 
 export default memo(ItemDetailPage);

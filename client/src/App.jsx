@@ -1,16 +1,15 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
+import { Container } from '@material-ui/core';
 
 import Routes from './routes';
 
-import './App.css';
-
 const App = () => (
   <BrowserRouter>
-    <div className="App">
+    <Container fixed>
       <Routes />
-    </div>
+    </Container>
   </BrowserRouter>
 );
 
