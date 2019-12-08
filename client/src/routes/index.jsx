@@ -6,13 +6,11 @@ import ErrorBoundary from './ErrorBoundary';
 
 const ItemListPage = lazy(() => import('../pages/ItemListPage'));
 const ItemDetailPage = lazy(() => import('../pages/ItemDetailPage'));
-const NotFoundPage = lazy(() => import('./NotFoundPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
 const Routes = () => (
   <ErrorBoundary
-    fallback={
-      <h2>Could not fetch items. Either reload or check API Server.</h2>
-    }
+    fallback={<h2>Could not fetch items. Check error logs or API.</h2>}
   >
     <Suspense fallback={<CircularProgress />}>
       <Switch>
@@ -29,7 +27,10 @@ const Routes = () => (
         <Route exact path="/items">
           <Redirect to="/" />
         </Route>
-        <Route path="*" component={props => <NotFoundPage {...props} />} />
+        <Route
+          path="*"
+          component={props => <NotFoundPage errorCode={404} {...props} />}
+        />
       </Switch>
     </Suspense>
   </ErrorBoundary>
