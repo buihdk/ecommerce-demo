@@ -10,21 +10,24 @@ import ItemDetail from '../components/ItemDetail';
 
 const ItemDetailPage = () => {
   const { id } = useParams();
-  const [response, setResponse] = useState({});
+  const [res, setRes] = useState({});
+  const categories = useMemo(() => getCategories(), []);
 
   useEffect(() => {
-    api.fetchItemById(id).then(res => setResponse(res));
+    api.fetchItemById(id).then(resolved => setRes(resolved));
   }, [id]);
 
-  const categories = useMemo(() => getCategories(), []);
-  const categoryName = get(
-    find(categories, category => Number(category.id) === response.category_id),
-    'name',
-    '',
-  );
+  let categoryName;
+  if (res && res.category_id) {
+    categoryName = get(
+      find(categories, category => Number(category.id) === res.category_id),
+      'name',
+      '',
+    );
+  }
 
-  if (response.err) return <ErrorBar msg={response.err} />;
-  return <ItemDetail item={response} categoryName={categoryName} />;
+  if (res && res.err) return <ErrorBar msg={res.err} />;
+  return <ItemDetail item={res} categoryName={categoryName} />;
 };
 
 export default memo(ItemDetailPage);
