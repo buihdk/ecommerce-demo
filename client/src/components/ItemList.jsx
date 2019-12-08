@@ -1,7 +1,6 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-
 import {
   makeStyles,
   Box,
@@ -59,6 +58,7 @@ const useButtonBase = makeStyles(theme => ({
       },
     },
   },
+  focusVisible: {},
   imageButton: {
     position: 'absolute',
     left: 0,
@@ -105,10 +105,14 @@ const useButtonBase = makeStyles(theme => ({
   },
 }));
 
+export const useHistoryPush = history =>
+  useCallback(id => history.push(`items/${id}`), [history]);
+
 const ItemList = ({ items }) => {
   const styles = useStyles();
   const buttonBase = useButtonBase();
   const history = useHistory();
+  const handleClick = useHistoryPush(history);
 
   return (
     <Grid container justify="center" spacing={2}>
@@ -120,9 +124,11 @@ const ItemList = ({ items }) => {
                 <Box className={styles.soldRibbon}>SOLD</Box>
               )}
               <ButtonBase
+                focusRipple
                 key={item.name}
                 className={buttonBase.image}
-                onClick={() => history.push(`items/${item.id}`)}
+                focusVisibleClassName={buttonBase.focusVisible}
+                onClick={() => handleClick(item.id)}
               >
                 <Box
                   className={buttonBase.imageSrc}

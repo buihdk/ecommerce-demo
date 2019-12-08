@@ -1,16 +1,21 @@
 import React, { memo, useState, useEffect } from 'react';
 
-import api from '../services';
+import { fetchItems } from '../services';
+import ErrorBar from '../utils/ErrorBar';
+
 import ItemList from '../components/ItemList';
 
-const ItemListPage = () => {
-  const [items, setItems] = useState([]);
-
+export const useFetchItems = setRes =>
   useEffect(() => {
-    api.fetchItems().then(res => setItems(res.data));
-  }, []);
+    fetchItems().then(response => setRes(response));
+  }, [setRes]);
 
-  return <ItemList items={items} />;
+const ItemListPage = () => {
+  const [res, setRes] = useState({});
+  useFetchItems(setRes);
+
+  if (res && res.err) return <ErrorBar msg={res.err} />;
+  return <ItemList items={res.data} />;
 };
 
 export default memo(ItemListPage);

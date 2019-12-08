@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemListPage useFetchItems returns data 1`] = `<Memo(ItemList) />`;
+
+exports[`ItemListPage useFetchItems returns error 1`] = `<Memo(ItemList) />`;

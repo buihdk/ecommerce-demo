@@ -27,6 +27,6 @@
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-indent": 0,
     "react/jsx-props-no-spreading": "off",
-    "react/state-in-constructor": [2, "never"]
+    "react/state-in-constructor": 1
   }
 }

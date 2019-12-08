@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemList renders without crashing 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  justify="center"
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    key="1"
+  >
+    <WithStyles(ForwardRef(Card))
+      className="makeStyles-card-1"
+    >
+      <WithStyles(ForwardRef(ButtonBase))
+        className="makeStyles-image-4"
+        focusRipple={true}
+        focusVisibleClassName="makeStyles-focusVisible-5"
+        key="item 1"
+        onClick={[Function]}
+      >
+        <Styled(MuiBox)
+          className="makeStyles-imageSrc-7"
+          style={
+            Object {
+              "backgroundImage": "url(1)",
+            }
+          }
+        />
+        <Styled(MuiBox)
+          className="makeStyles-imageBackdrop-8"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-imageButton-6"
+        >
+          <WithStyles(ForwardRef(Typography))
+            className="makeStyles-imageTitle-9"
+            variant="subtitle1"
+          >
+            View
+            <Styled(MuiBox)
+              className="makeStyles-imageMarked-10"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </Styled(MuiBox)>
+      </WithStyles(ForwardRef(ButtonBase))>
+      <WithStyles(ForwardRef(CardContent))>
+        <WithStyles(ForwardRef(Typography))
+          color="textSecondary"
+          variant="h6"
+        >
+          item 1
+          <Styled(MuiBox)
+            display="flex"
+            justifyContent="space-between"
+          >
+            <WithStyles(ForwardRef(Typography))
+              color="textPrimary"
+              variant="h6"
+            >
+              ¥ 10
+            </WithStyles(ForwardRef(Typography))>
+            <Styled(MuiBox)>
+              <FavoriteBorderIcon
+                className="makeStyles-icon-3"
+              />
+              2
+            </Styled(MuiBox)>
+          </Styled(MuiBox)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(CardContent))>
+    </WithStyles(ForwardRef(Card))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    key="2"
+  >
+    <WithStyles(ForwardRef(Card))
+      className="makeStyles-card-1"
+    >
+      <Styled(MuiBox)
+        className="makeStyles-soldRibbon-2"
+      >
+        SOLD
+      </Styled(MuiBox)>
+      <WithStyles(ForwardRef(ButtonBase))
+        className="makeStyles-image-4"
+        focusRipple={true}
+        focusVisibleClassName="makeStyles-focusVisible-5"
+        key="item 2"
+        onClick={[Function]}
+      >
+        <Styled(MuiBox)
+          className="makeStyles-imageSrc-7"
+          style={
+            Object {
+              "backgroundImage": "url(2)",
+            }
+          }
+        />
+        <Styled(MuiBox)
+          className="makeStyles-imageBackdrop-8"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-imageButton-6"
+        >
+          <WithStyles(ForwardRef(Typography))
+            className="makeStyles-imageTitle-9"
+            variant="subtitle1"
+          >
+            View
+            <Styled(MuiBox)
+              className="makeStyles-imageMarked-10"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </Styled(MuiBox)>
+      </WithStyles(ForwardRef(ButtonBase))>
+      <WithStyles(ForwardRef(CardContent))>
+        <WithStyles(ForwardRef(Typography))
+          color="textSecondary"
+          variant="h6"
+        >
+          item 2
+          <Styled(MuiBox)
+            display="flex"
+            justifyContent="space-between"
+          >
+            <WithStyles(ForwardRef(Typography))
+              color="textPrimary"
+              variant="h6"
+            >
+              ¥ 20
+            </WithStyles(ForwardRef(Typography))>
+            <Styled(MuiBox)>
+              <FavoriteBorderIcon
+                className="makeStyles-icon-3"
+              />
+              0
+            </Styled(MuiBox)>
+          </Styled(MuiBox)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(CardContent))>
+    </WithStyles(ForwardRef(Card))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

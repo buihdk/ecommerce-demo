@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ErrorBoundary extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = { hasError: false };
 
   static getDerivedStateFromError(error) {

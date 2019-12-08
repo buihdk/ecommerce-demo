@@ -16,8 +16,10 @@ Author: **Khoa Bui**
 - [x] Implement a Not Found page for incorrect URLs
 - [x] Implement a View button to navigate to Item Detail page from Item List page
 - [x] Implement ErrorBoundary to render a fallback UI
+- [x] Implement ErrorBar to render an Error alert
+- [x] Implement unit tests for components
 - [ ] Implement navigation bar
 - [ ] Implement search box for filtering in Item List page
 - [ ] Implement categories for filtering
 - [ ] Implement localization
-- [ ] Update overall layout
+- [x] Update overall layout
