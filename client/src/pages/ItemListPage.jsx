@@ -7,7 +7,7 @@ const ItemListPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    api.fetchItems().then(res => setItems(res.data.slice(0, 5))); // get only 5 items
+    api.fetchItems().then(res => setItems(res.data));
   }, []);
 
   return <ItemList items={items} />;

@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   makeStyles,
+  Box,
+  Grid,
   Card,
-  CardActionArea,
   CardMedia,
   CardContent,
   Typography,
   Button,
 } from '@material-ui/core';
-import { Favorite } from '@material-ui/icons';
+import { FavoriteBorder } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345,
     position: 'relative',
   },
   soldRibbon: {
     position: 'absolute',
-    top: -16,
-    left: -84,
+    top: -10,
+    left: -76,
     zIndex: 100,
     backgroundColor: '#e43',
     color: 'white',
@@ -32,7 +32,12 @@ const useStyles = makeStyles({
     transform: 'rotate(-45deg)',
   },
   media: {
-    height: 140,
+    height: 400,
+    width: 400,
+  },
+  icon: {
+    fontSize: 13,
+    marginRight: 2,
   },
 });
 
@@ -40,36 +45,38 @@ const ItemList = ({ items }) => {
   const styles = useStyles();
 
   return (
-    <div>
+    <Grid container justify="center" spacing={2}>
       {items &&
         items.map(item => (
-          <Card key={item.id} className={styles.card}>
-            {item.is_sold_out && (
-              <span className={styles.soldRibbon}>SOLD</span>
-            )}
-            <CardActionArea>
+          <Grid key={item.id} item>
+            <Card className={styles.card}>
+              {item.is_sold_out && (
+                <Box className={styles.soldRibbon}>SOLD</Box>
+              )}
               <CardMedia className={styles.media} image={item.image} />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {item.description}
+                <Typography variant="body1" color="textSecondary">
+                  {item.name}
+                  <Box display="flex" justifyContent="space-between">
+                    <Typography variant="h6" color="textPrimary">
+                      {`¥ ${item.price}`}
+                    </Typography>
+                    <Box>
+                      <FavoriteBorder className={styles.icon} />
+                      {item.like_count}
+                    </Box>
+                  </Box>
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {`¥ ${item.price}`}
-                </Typography>
-                <Favorite fontSize="small" />
-                {item.like_count}
+                <Link to={{ pathname: `items/${item.id}` }}>
+                  <Button variant="outline" size="small">
+                    View Details
+                  </Button>
+                </Link>
               </CardContent>
-              <Link
-                to={{
-                  pathname: `items/${item.id}`,
-                }}
-              >
-                <Button size="small">Learn More</Button>
-              </Link>
-            </CardActionArea>
-          </Card>
+            </Card>
+          </Grid>
         ))}
-    </div>
+    </Grid>
   );
 };
 
