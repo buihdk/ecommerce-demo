@@ -13,10 +13,8 @@ import {
 } from '@material-ui/core';
 import { FavoriteBorder } from '@material-ui/icons';
 
-const useStyles = makeStyles(theme => ({
-  card: {
-    position: 'relative',
-  },
+const useStyles = makeStyles({
+  card: { position: 'relative' },
   soldRibbon: {
     position: 'absolute',
     top: -10,
@@ -35,9 +33,13 @@ const useStyles = makeStyles(theme => ({
     fontSize: 17,
     marginRight: 4,
   },
+});
+
+const useButtonBase = makeStyles(theme => ({
   image: {
     position: 'relative',
     height: 400,
+    width: 400,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
       height: 100,
@@ -55,7 +57,6 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
-  focusVisible: {},
   imageButton: {
     position: 'absolute',
     left: 0,
@@ -104,6 +105,7 @@ const useStyles = makeStyles(theme => ({
 
 const ItemList = ({ items }) => {
   const styles = useStyles();
+  const buttonBase = useButtonBase();
   const history = useHistory();
 
   return (
@@ -116,29 +118,24 @@ const ItemList = ({ items }) => {
                 <Box className={styles.soldRibbon}>SOLD</Box>
               )}
               <ButtonBase
-                focusRipple
                 key={item.name}
-                className={styles.image}
-                focusVisibleClassName={styles.focusVisible}
-                style={{ width: 400 }}
+                className={buttonBase.image}
                 onClick={() => history.push(`items/${item.id}`)}
               >
-                <span
-                  className={styles.imageSrc}
+                <Box
+                  className={buttonBase.imageSrc}
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
-                <span className={styles.imageBackdrop} />
-                <span className={styles.imageButton}>
+                <Box className={buttonBase.imageBackdrop} />
+                <Box className={buttonBase.imageButton}>
                   <Typography
-                    component="span"
                     variant="subtitle1"
-                    color="inherit"
-                    className={styles.imageTitle}
+                    className={buttonBase.imageTitle}
                   >
                     View
-                    <span className={styles.imageMarked} />
+                    <Box className={buttonBase.imageMarked} />
                   </Typography>
-                </span>
+                </Box>
               </ButtonBase>
               <CardContent>
                 <Typography variant="h6" color="textSecondary">
