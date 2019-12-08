@@ -6,14 +6,14 @@ import ErrorBar from '../utils/ErrorBar';
 import ItemList from '../components/ItemList';
 
 const ItemListPage = () => {
-  const [response, setResponse] = useState({});
+  const [res, setRes] = useState({});
 
   useEffect(() => {
-    api.fetchItems().then(res => setResponse(res));
+    api.fetchItems().then(resolved => setRes(resolved));
   }, []);
 
-  if (response.err) return <ErrorBar msg={response.err} />;
-  return <ItemList items={response.data} />;
+  if (res && res.err) return <ErrorBar msg={res.err} />;
+  return <ItemList items={res.data} />;
 };
 
 export default memo(ItemListPage);
