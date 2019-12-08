@@ -2,15 +2,18 @@ import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CircularProgress } from '@material-ui/core';
 
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from '../utils/ErrorBoundary';
+import ErrorBar from '../utils/ErrorBar';
 
 const ItemListPage = lazy(() => import('../pages/ItemListPage'));
 const ItemDetailPage = lazy(() => import('../pages/ItemDetailPage'));
-const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+const NotFoundPage = lazy(() => import('../utils/NotFoundPage'));
 
 const Routes = () => (
   <ErrorBoundary
-    fallback={<h2>Could not fetch items. Check error logs or API.</h2>}
+    fallback={
+      <ErrorBar msg="Could not load routes. Check console for more info." />
+    }
   >
     <Suspense fallback={<CircularProgress />}>
       <Switch>

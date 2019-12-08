@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 const ItemDetail = ({ item, categoryName }) => {
   const styles = useStyles();
   if (!item) {
-    const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+    const NotFoundPage = lazy(() => import('../utils/NotFoundPage'));
     return <NotFoundPage errorCode={400} />;
   }
 
