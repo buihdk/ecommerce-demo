@@ -8,15 +8,11 @@ import ItemList from '../components/ItemList';
 export const useFetchItems = setRes =>
   useEffect(() => {
     fetchItems().then(response => setRes(response));
-  }, []);
+  }, [setRes]);
 
 const ItemListPage = () => {
   const [res, setRes] = useState({});
-
   useFetchItems(setRes);
-  // useEffect(() => {
-  //   fetchItems().then(resolved => setRes(resolved));
-  // }, []);
 
   if (res && res.err) return <ErrorBar msg={res.err} />;
   return <ItemList items={res.data} />;
