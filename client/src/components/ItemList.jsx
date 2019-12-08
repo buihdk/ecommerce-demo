@@ -14,7 +14,9 @@ import {
 import { FavoriteBorder } from '@material-ui/icons';
 
 const useStyles = makeStyles({
-  card: { position: 'relative' },
+  card: {
+    position: 'relative',
+  },
   soldRibbon: {
     position: 'absolute',
     top: -10,
