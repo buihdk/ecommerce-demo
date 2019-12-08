@@ -12,3 +12,6 @@ client/yarn.lock
 
 # Ignore build version
 client/dist
+
+# Ignore test coverage
+client/coverage
