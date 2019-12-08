@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --mode development",
     "start": "webpack-dev-server --mode development",
-    "test": "./node_modules/.bin/jest --config=./jest.config.js --env=./setupJest23Env.js --coverage --runInBand"
+    "test": "./node_modules/.bin/jest --config=./jest.config.js --coverage --runInBand"
   },
   "dependencies": {
     "@material-ui/core": "^4.7.1",
