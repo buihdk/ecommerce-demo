@@ -6,14 +6,16 @@ import { Container } from '@material-ui/core';
 import { fetchCategories } from '../services/localStorage';
 import Routes from '../routes';
 
-fetchCategories();
+const App = () => {
+  fetchCategories();
 
-const App = () => (
-  <BrowserRouter>
-    <Container fixed>
-      <Routes />
-    </Container>
-  </BrowserRouter>
-);
+  return (
+    <BrowserRouter>
+      <Container fixed>
+        <Routes />
+      </Container>
+    </BrowserRouter>
+  );
+};
 
 export default hot(App);
