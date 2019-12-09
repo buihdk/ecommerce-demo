@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-const CATEGORIES = '_CATEGORIES_';
+export const CATEGORIES = '_CATEGORIES_';
 
 export const fetchCategories = () => {
   import('./index').then(async module => {
