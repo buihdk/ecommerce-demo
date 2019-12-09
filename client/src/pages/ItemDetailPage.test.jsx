@@ -9,9 +9,10 @@ import ItemDetailPage, { useFetchItemById } from './ItemDetailPage';
 const mockParams = { id: 1 };
 jest.mock('react-router-dom', () => ({ useParams: () => mockParams }));
 
+const setRes = jest.fn();
+const fetchItemByIdSpy = jest.spyOn(require('../services'), 'fetchItemById');
+
 describe('ItemDetailPage', () => {
-  const setRes = jest.fn();
-  const fetchItemByIdSpy = jest.spyOn(require('../services'), 'fetchItemById');
   let wrapper;
 
   beforeEach(() => {

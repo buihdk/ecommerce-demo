@@ -6,9 +6,10 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import ItemListPage, { useFetchItems } from './ItemListPage';
 
+const setRes = jest.fn();
+const fetchItemsSpy = jest.spyOn(require('../services'), 'fetchItems');
+
 describe('ItemListPage', () => {
-  const setRes = jest.fn();
-  const fetchItemsSpy = jest.spyOn(require('../services'), 'fetchItems');
   let wrapper;
 
   beforeEach(() => {
