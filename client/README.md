@@ -2,6 +2,9 @@
 
 Author: **Khoa Bui**
 
+## Demo
+https://share.getcloudapp.com/RBuX7YD6
+
 ## Minimum requirements
 - [x] The default view for the application is the Item List page.
 - [x] When an Item on the Item List page is clicked, the application should navigate to the Item Detail page.
