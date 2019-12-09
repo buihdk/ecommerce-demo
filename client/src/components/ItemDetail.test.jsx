@@ -1,9 +1,12 @@
 import React, { Suspense } from 'react';
-import { render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { create } from 'react-test-renderer';
+import { renderHook } from '@testing-library/react-hooks';
 
-import ItemDetail from './ItemDetail';
+import ItemDetail, { useHistoryPush } from './ItemDetail';
+
+const mockHistory = { push: jest.fn() };
+jest.mock('react-router-dom', () => ({ useHistory: () => mockHistory }));
 
 const item = {
   id: '1',
@@ -17,9 +20,25 @@ const item = {
   is_sold_out: false,
 };
 
+const newItem = {
+  ...item,
+  image: '',
+};
+
+describe(`useHistoryPush`, () => {
+  test(`works correctly`, () => {
+    const {
+      result: { current: handleClick },
+    } = renderHook(() => useHistoryPush(mockHistory));
+    handleClick();
+
+    expect(mockHistory.push).toBeCalledWith('/');
+  });
+});
+
 describe('ItemDetail', () => {
   test('renders null item without crashing', () => {
-    const wrapper = create(
+    const wrapper = mount(
       <Suspense fallback={<div>loading...</div>}>
         <ItemDetail item={null} />
       </Suspense>,
@@ -29,7 +48,13 @@ describe('ItemDetail', () => {
   });
 
   test('renders valid item without crashing', () => {
-    const wrapper = render(<ItemDetail item={item} categoryName="men" />);
+    const wrapper = shallow(<ItemDetail item={item} categoryName="men" />);
+
+    expect(toJSON(wrapper)).toMatchSnapshot();
+  });
+
+  test('renders item with no image without crashing', () => {
+    const wrapper = shallow(<ItemDetail item={newItem} categoryName="baby" />);
 
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
