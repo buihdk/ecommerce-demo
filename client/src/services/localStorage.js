@@ -3,7 +3,7 @@ import { get } from 'lodash';
 export const CATEGORIES = '_CATEGORIES_';
 
 export const fetchCategories = () => {
-  import('./index').then(async module => {
+  import('.').then(async module => {
     if (module && module.fetchCategories) {
       const res = await module.fetchCategories();
       window.localStorage.setItem(

@@ -1,9 +1,9 @@
 import React, { memo, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-const ItemListPage = lazy(() => import('../pages/ItemListPage'));
-const ItemDetailPage = lazy(() => import('../pages/ItemDetailPage'));
-const NotFoundPage = lazy(() => import('../utils/NotFoundPage'));
+const ItemListPage = lazy(() => import('pages/ItemListPage'));
+const ItemDetailPage = lazy(() => import('pages/ItemDetailPage'));
+const NotFoundPage = lazy(() => import('utils/NotFoundPage'));
 
 const Routes = () => (
   <Switch>

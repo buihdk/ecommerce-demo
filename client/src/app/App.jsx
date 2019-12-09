@@ -3,10 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 import { Container, CircularProgress } from '@material-ui/core';
 
-import { fetchCategories } from '../services/localStorage';
-import ErrorBoundary from '../utils/ErrorBoundary';
-import ErrorBar from '../utils/ErrorBar';
-import Routes from '../routes';
+import { fetchCategories } from 'services/localStorage';
+import ErrorBoundary from 'utils/ErrorBoundary';
+import ErrorBar from 'utils/ErrorBar';
+
+import Routes from 'routes';
 
 const App = () => {
   fetchCategories();

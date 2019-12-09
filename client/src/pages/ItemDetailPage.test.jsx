@@ -10,7 +10,7 @@ const mockParams = { id: 1 };
 jest.mock('react-router-dom', () => ({ useParams: () => mockParams }));
 
 const setRes = jest.fn();
-const fetchItemByIdSpy = jest.spyOn(require('../services'), 'fetchItemById');
+const fetchItemByIdSpy = jest.spyOn(require('services'), 'fetchItemById');
 
 describe('ItemDetailPage', () => {
   let wrapper;
