@@ -5,17 +5,15 @@ import toJSON from 'enzyme-to-json';
 
 import Routes from '.';
 
-jest.spyOn(require('../services'), 'fetchItems').mockImplementation(
-  () =>
-    new Promise(resolve => {
-      resolve({ data: [] });
-    }),
+jest.spyOn(require('../services'), 'fetchItems').mockResolvedValue(
+  new Promise(resolve => {
+    resolve({ data: [] });
+  }),
 );
-jest.spyOn(require('../services'), 'fetchItemById').mockImplementation(
-  () =>
-    new Promise(resolve => {
-      resolve({ category_id: 1 });
-    }),
+jest.spyOn(require('../services'), 'fetchItemById').mockResolvedValue(
+  new Promise(resolve => {
+    resolve({ category_id: 1 });
+  }),
 );
 
 describe('Routes', () => {
