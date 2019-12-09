@@ -63,7 +63,10 @@ const ItemDetail = ({ item, categoryName }) => {
       <Typography variant="h6" align="center">
         {item.name}
       </Typography>
-      <CardMedia className={styles.media} image={item.image} />
+      <CardMedia
+        className={styles.media}
+        image={item.image ? item.image : 'https://picsum.photos/id/0/400/400'}
+      />
       <Typography className={styles.body}>{`Name: ${item.name}`}</Typography>
       <Box
         className={styles.body}
