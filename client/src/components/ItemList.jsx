@@ -13,6 +13,9 @@ import {
 import { FavoriteBorder } from '@material-ui/icons';
 
 const useStyles = makeStyles({
+  container: {
+    marginTop: 40,
+  },
   card: {
     position: 'relative',
   },
@@ -115,7 +118,7 @@ const ItemList = ({ items }) => {
   const handleClick = useHistoryPush(history);
 
   return (
-    <Grid container justify="center" spacing={2}>
+    <Grid className={styles.container} container justify="center" spacing={2}>
       {items &&
         items.map(item => (
           <Grid key={item.id} item>
