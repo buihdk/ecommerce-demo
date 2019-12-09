@@ -8,34 +8,34 @@ exports[`ItemDetail renders null item without crashing 1`] = `
 
 exports[`ItemDetail renders valid item without crashing 1`] = `
 <div
-  class="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-1 MuiPaper-rounded"
+  class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
 >
-  <p
-    class="MuiTypography-root MuiTypography-body1"
+  <h6
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter"
   >
     item 1
-  </p>
+  </h6>
   <div
-    class="MuiCardMedia-root makeStyles-media-2"
+    class="MuiCardMedia-root makeStyles-media-1"
     style="background-image:url(\\"1\\")"
   />
   <p
-    class="MuiTypography-root MuiTypography-body1"
+    class="MuiTypography-root makeStyles-body-5 MuiTypography-body1"
   >
     Name: item 1
   </p>
   <div
-    class="MuiBox-root MuiBox-root-67"
+    class="MuiBox-root MuiBox-root-69 makeStyles-body-5"
   >
     <div
-      class="MuiBox-root MuiBox-root-68 makeStyles-chipWrapper-4"
+      class="MuiBox-root MuiBox-root-70 makeStyles-chipWrapper-3"
     >
       <div
         class="MuiChip-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiChip-icon makeStyles-icon-3"
+          class="MuiSvgIcon-root MuiChip-icon makeStyles-icon-2"
           focusable="false"
           role="presentation"
           viewBox="0 0 24 24"
@@ -51,20 +51,20 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
         </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root-108 makeStyles-count-5"
+        class="MuiBox-root MuiBox-root-110 makeStyles-count-4"
       >
         2
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root-109 makeStyles-chipWrapper-4"
+      class="MuiBox-root MuiBox-root-111 makeStyles-chipWrapper-3"
     >
       <div
         class="MuiChip-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiChip-icon makeStyles-icon-3"
+          class="MuiSvgIcon-root MuiChip-icon makeStyles-icon-2"
           focusable="false"
           role="presentation"
           viewBox="0 0 24 24"
@@ -80,31 +80,60 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
         </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root-110 makeStyles-count-5"
+        class="MuiBox-root MuiBox-root-112 makeStyles-count-4"
       >
         3
       </div>
     </div>
+    <div
+      class="MuiBox-root MuiBox-root-113 makeStyles-chipWrapper-3"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
   <p
-    class="MuiTypography-root MuiTypography-body1"
+    class="MuiTypography-root makeStyles-body-5 MuiTypography-body1"
   >
     Categories: men
   </p>
   <p
-    class="MuiTypography-root MuiTypography-body1"
+    class="MuiTypography-root makeStyles-body-5 MuiTypography-body1"
   >
     Description: description 1
   </p>
-  <span
-    class="MuiTypography-root MuiTypography-h5"
+  <div
+    class="MuiBox-root MuiBox-root-120 makeStyles-footer-6"
   >
-    ¥ 10
-  </span>
-  <span
-    class="MuiTypography-root MuiTypography-body1"
-  >
-    free
-  </span>
+    <span
+      class="MuiTypography-root MuiTypography-h4"
+    >
+      ¥ 10
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-subtitle2"
+      style="margin-left:8px"
+    >
+      free
+    </span>
+    <div
+      class="MuiBox-root MuiBox-root-121 makeStyles-footerCallToAction-7"
+    >
+      カートに追加
+    </div>
+  </div>
 </div>
 `;
