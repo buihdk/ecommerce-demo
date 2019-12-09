@@ -17,9 +17,9 @@ Author: **Khoa Bui**
 - [x] Implement a View button to navigate to Item Detail page from Item List page
 - [x] Implement ErrorBoundary to render a fallback UI
 - [x] Implement ErrorBar to render an Error alert
-- [x] Implement unit tests for components
+- [x] Implement unit tests for all components
+- [x] Update overall layout
 - [ ] Implement navigation bar
 - [ ] Implement search box for filtering in Item List page
 - [ ] Implement categories for filtering
 - [ ] Implement localization
-- [x] Update overall layout
