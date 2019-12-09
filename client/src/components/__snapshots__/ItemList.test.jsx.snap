@@ -2,6 +2,7 @@
 
 exports[`ItemList renders without crashing 1`] = `
 <WithStyles(ForwardRef(Grid))
+  className="makeStyles-container-1"
   container={true}
   justify="center"
   spacing={2}
@@ -11,17 +12,17 @@ exports[`ItemList renders without crashing 1`] = `
     key="1"
   >
     <WithStyles(ForwardRef(Card))
-      className="makeStyles-card-1"
+      className="makeStyles-card-2"
     >
       <WithStyles(ForwardRef(ButtonBase))
-        className="makeStyles-image-4"
+        className="makeStyles-image-5"
         focusRipple={true}
-        focusVisibleClassName="makeStyles-focusVisible-5"
+        focusVisibleClassName="makeStyles-focusVisible-6"
         key="item 1"
         onClick={[Function]}
       >
         <Styled(MuiBox)
-          className="makeStyles-imageSrc-7"
+          className="makeStyles-imageSrc-8"
           style={
             Object {
               "backgroundImage": "url(1)",
@@ -29,18 +30,18 @@ exports[`ItemList renders without crashing 1`] = `
           }
         />
         <Styled(MuiBox)
-          className="makeStyles-imageBackdrop-8"
+          className="makeStyles-imageBackdrop-9"
         />
         <Styled(MuiBox)
-          className="makeStyles-imageButton-6"
+          className="makeStyles-imageButton-7"
         >
           <WithStyles(ForwardRef(Typography))
-            className="makeStyles-imageTitle-9"
+            className="makeStyles-imageTitle-10"
             variant="subtitle1"
           >
             View
             <Styled(MuiBox)
-              className="makeStyles-imageMarked-10"
+              className="makeStyles-imageMarked-11"
             />
           </WithStyles(ForwardRef(Typography))>
         </Styled(MuiBox)>
@@ -63,7 +64,7 @@ exports[`ItemList renders without crashing 1`] = `
             </WithStyles(ForwardRef(Typography))>
             <Styled(MuiBox)>
               <FavoriteBorderIcon
-                className="makeStyles-icon-3"
+                className="makeStyles-icon-4"
               />
               2
             </Styled(MuiBox)>
@@ -77,22 +78,22 @@ exports[`ItemList renders without crashing 1`] = `
     key="2"
   >
     <WithStyles(ForwardRef(Card))
-      className="makeStyles-card-1"
+      className="makeStyles-card-2"
     >
       <Styled(MuiBox)
-        className="makeStyles-soldRibbon-2"
+        className="makeStyles-soldRibbon-3"
       >
         SOLD
       </Styled(MuiBox)>
       <WithStyles(ForwardRef(ButtonBase))
-        className="makeStyles-image-4"
+        className="makeStyles-image-5"
         focusRipple={true}
-        focusVisibleClassName="makeStyles-focusVisible-5"
+        focusVisibleClassName="makeStyles-focusVisible-6"
         key="item 2"
         onClick={[Function]}
       >
         <Styled(MuiBox)
-          className="makeStyles-imageSrc-7"
+          className="makeStyles-imageSrc-8"
           style={
             Object {
               "backgroundImage": "url(2)",
@@ -100,18 +101,18 @@ exports[`ItemList renders without crashing 1`] = `
           }
         />
         <Styled(MuiBox)
-          className="makeStyles-imageBackdrop-8"
+          className="makeStyles-imageBackdrop-9"
         />
         <Styled(MuiBox)
-          className="makeStyles-imageButton-6"
+          className="makeStyles-imageButton-7"
         >
           <WithStyles(ForwardRef(Typography))
-            className="makeStyles-imageTitle-9"
+            className="makeStyles-imageTitle-10"
             variant="subtitle1"
           >
             View
             <Styled(MuiBox)
-              className="makeStyles-imageMarked-10"
+              className="makeStyles-imageMarked-11"
             />
           </WithStyles(ForwardRef(Typography))>
         </Styled(MuiBox)>
@@ -134,7 +135,7 @@ exports[`ItemList renders without crashing 1`] = `
             </WithStyles(ForwardRef(Typography))>
             <Styled(MuiBox)>
               <FavoriteBorderIcon
-                className="makeStyles-icon-3"
+                className="makeStyles-icon-4"
               />
               0
             </Styled(MuiBox)>

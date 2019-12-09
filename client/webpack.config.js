@@ -38,7 +38,17 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      app: path.resolve(__dirname, 'src/app/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+      routes: path.resolve(__dirname, 'src/routes/'),
+      services: path.resolve(__dirname, 'src/services/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+    },
+  },
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/dist/',

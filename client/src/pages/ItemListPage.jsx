@@ -1,9 +1,9 @@
 import React, { memo, useState, useEffect } from 'react';
 
-import { fetchItems } from '../services';
-import ErrorBar from '../utils/ErrorBar';
+import { fetchItems } from 'services';
+import ErrorBar from 'utils/ErrorBar';
 
-import ItemList from '../components/ItemList';
+import ItemList from 'components/ItemList';
 
 export const useFetchItems = setRes =>
   useEffect(() => {

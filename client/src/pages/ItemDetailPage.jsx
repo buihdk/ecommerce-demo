@@ -2,11 +2,11 @@ import React, { memo, useMemo, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { get, find } from 'lodash';
 
-import { fetchItemById } from '../services';
-import { getCategories } from '../services/localStorage';
-import ErrorBar from '../utils/ErrorBar';
+import { fetchItemById } from 'services';
+import { getCategories } from 'services/localStorage';
+import ErrorBar from 'utils/ErrorBar';
 
-import ItemDetail from '../components/ItemDetail';
+import ItemDetail from 'components/ItemDetail';
 
 export const useFetchItemById = (id, setRes) =>
   useEffect(() => {

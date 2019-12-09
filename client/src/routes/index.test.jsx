@@ -6,12 +6,12 @@ import toJSON from 'enzyme-to-json';
 
 import Routes from '.';
 
-jest.spyOn(require('../services'), 'fetchItems').mockResolvedValue(
+jest.spyOn(require('services'), 'fetchItems').mockResolvedValue(
   new Promise(resolve => {
     resolve({ data: [] });
   }),
 );
-jest.spyOn(require('../services'), 'fetchItemById').mockResolvedValue(
+jest.spyOn(require('services'), 'fetchItemById').mockResolvedValue(
   new Promise(resolve => {
     resolve({ category_id: 1 });
   }),

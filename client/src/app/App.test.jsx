@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 
-import * as LocalStorage from '../services/localStorage';
+import * as LocalStorage from 'services/localStorage';
 import App from './App';
 
 const fetchCategoriesSpy = jest.spyOn(LocalStorage, 'fetchCategories');
