@@ -22,8 +22,9 @@ describe('ItemListPage', () => {
           resolve({ data: [] });
         }),
     );
-    await renderHook(() => useFetchItems(setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItems(setRes));
       wrapper = shallow(<ItemListPage />);
     });
 
@@ -39,8 +40,9 @@ describe('ItemListPage', () => {
           reject({ err: 'Error!' });
         }),
     );
-    await renderHook(() => useFetchItems(setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItems(setRes));
       wrapper = shallow(<ItemListPage />);
     });
 

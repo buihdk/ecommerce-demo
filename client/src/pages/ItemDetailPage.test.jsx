@@ -26,8 +26,9 @@ describe('ItemDetailPage', () => {
           resolve({ category_id: 1 });
         }),
     );
-    await renderHook(() => useFetchItemById(1, setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItemById(1, setRes));
       wrapper = shallow(<ItemDetailPage />);
     });
 
@@ -43,8 +44,9 @@ describe('ItemDetailPage', () => {
           reject({ err: 'Error!' });
         }),
     );
-    await renderHook(() => useFetchItemById(2, setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItemById(2, setRes));
       wrapper = shallow(<ItemDetailPage />);
     });
 
