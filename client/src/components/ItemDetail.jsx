@@ -6,14 +6,12 @@ import {
   Box,
   CardMedia,
   Chip,
+  Avatar,
   Typography,
 } from '@material-ui/core';
-import { FavoriteBorder, ChatBubbleOutline } from '@material-ui/icons';
+import { FavoriteBorder, ChatBubbleOutline, Flag } from '@material-ui/icons';
 
 const useStyles = makeStyles({
-  paper: {
-    padding: '10px',
-  },
   media: {
     height: 400,
   },
@@ -29,7 +27,26 @@ const useStyles = makeStyles({
     fontWeight: 600,
     lineHeight: '32px',
     display: 'inline-block',
-    marginLeft: '4px',
+    marginLeft: 4,
+  },
+  body: {
+    padding: '0px 20px 8px',
+  },
+  footer: {
+    color: 'white',
+    backgroundColor: '#35231F',
+    display: 'flex',
+    alignItems: 'baseline',
+    padding: 10,
+    position: 'relative',
+  },
+  footerCallToAction: {
+    backgroundColor: '#e43',
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    lineHeight: '39px',
+    padding: '0px 10px',
   },
 });
 
@@ -42,11 +59,17 @@ const ItemDetail = ({ item, categoryName }) => {
   }
 
   return (
-    <Paper className={styles.paper}>
-      <Typography>{item.name}</Typography>
+    <Paper>
+      <Typography variant="h6" align="center">
+        {item.name}
+      </Typography>
       <CardMedia className={styles.media} image={item.image} />
-      <Typography>{`Name: ${item.name}`}</Typography>
-      <Box display="flex" justifyContent="space-between">
+      <Typography className={styles.body}>{`Name: ${item.name}`}</Typography>
+      <Box
+        className={styles.body}
+        display="flex"
+        justifyContent="space-between"
+      >
         <Box className={styles.chipWrapper}>
           <Chip
             label="いいね!"
@@ -61,11 +84,39 @@ const ItemDetail = ({ item, categoryName }) => {
           />
           <Box className={styles.count}>{item.comment_count}</Box>
         </Box>
+        <Box
+          className={styles.chipWrapper}
+          display={{ xs: 'none', sm: 'block' }}
+        >
+          <Avatar>
+            <Flag />
+          </Avatar>
+        </Box>
       </Box>
-      <Typography>{`Categories: ${categoryName}`}</Typography>
-      <Typography>{`Description: ${item.description}`}</Typography>
-      <Typography variant="h5" component="span">{`¥ ${item.price}`}</Typography>
-      <Typography component="span">{item.shipping_fee}</Typography>
+      <Typography className={styles.body}>
+        {`Categories: ${categoryName}`}
+      </Typography>
+      <Typography className={styles.body}>
+        {`Description: ${item.description}`}
+      </Typography>
+      <Box className={styles.footer}>
+        <Typography component="span" variant="h4">
+          {`¥ ${item.price}`}
+        </Typography>
+        <Typography
+          component="span"
+          variant="subtitle2"
+          style={{ marginLeft: 8 }}
+        >
+          {item.shipping_fee}
+        </Typography>
+        <Box
+          className={styles.footerCallToAction}
+          display={{ xs: 'none', sm: 'block' }}
+        >
+          カートに追加
+        </Box>
+      </Box>
     </Paper>
   );
 };

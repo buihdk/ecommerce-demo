@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary no error renders without crashing 1`] = `
+<div>
+  Children
+</div>
+`;
+
+exports[`ErrorBoundary with errors renders without crashing 1`] = `
+<h2>
+  App crashed.
+</h2>
+`;

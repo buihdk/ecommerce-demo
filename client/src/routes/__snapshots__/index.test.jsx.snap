@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes renders ItemDetailPage without crashing 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/items/1",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "ulizq3",
+            "pathname": "/items/1",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "ulizq3",
+          "pathname": "/items/1",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Suspense
+      fallback={
+        <div>
+          loading...
+        </div>
+      }
+    >
+      <Memo(Routes)>
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {
+                  "id": "1",
+                },
+                "path": "/items/:id",
+                "url": "/items/1",
+              }
+            }
+            exact={true}
+            location={
+              Object {
+                "hash": "",
+                "key": "ulizq3",
+                "pathname": "/items/1",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            path="/items/:id"
+          >
+            <component
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "key": "ulizq3",
+                      "pathname": "/items/1",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "key": "ulizq3",
+                    "pathname": "/items/1",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": "ulizq3",
+                  "pathname": "/items/1",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {
+                    "id": "1",
+                  },
+                  "path": "/items/:id",
+                  "url": "/items/1",
+                }
+              }
+            />
+          </Route>
+        </Switch>
+      </Memo(Routes)>
+      <div>
+        loading...
+      </div>
+    </Suspense>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Routes renders ItemListPage without crashing 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "cl62sv",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "cl62sv",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Suspense
+      fallback={
+        <div>
+          loading...
+        </div>
+      }
+    >
+      <Memo(Routes)>
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            exact={true}
+            location={
+              Object {
+                "hash": "",
+                "key": "cl62sv",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            path="/"
+          >
+            <component
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "key": "cl62sv",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "key": "cl62sv",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": "cl62sv",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+            />
+          </Route>
+        </Switch>
+      </Memo(Routes)>
+      <div>
+        loading...
+      </div>
+    </Suspense>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`Routes renders NotFoundPage without crashing 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/404",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "m0bgz4",
+            "pathname": "/404",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "m0bgz4",
+          "pathname": "/404",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Suspense
+      fallback={
+        <div>
+          loading...
+        </div>
+      }
+    >
+      <Memo(Routes)>
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {
+                  "0": "/404",
+                },
+                "path": "*",
+                "url": "/404",
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "key": "m0bgz4",
+                "pathname": "/404",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            path="*"
+          >
+            <component
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "key": "m0bgz4",
+                      "pathname": "/404",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "key": "m0bgz4",
+                    "pathname": "/404",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": "m0bgz4",
+                  "pathname": "/404",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {
+                    "0": "/404",
+                  },
+                  "path": "*",
+                  "url": "/404",
+                }
+              }
+            />
+          </Route>
+        </Switch>
+      </Memo(Routes)>
+      <div>
+        loading...
+      </div>
+    </Suspense>
+  </Router>
+</MemoryRouter>
+`;

@@ -12,7 +12,7 @@ module.exports = {
   coverageDirectory: '<rootDir>/coverage/',
   coverageReporters: ['lcov', 'text', 'text-summary'],
   moduleFileExtensions: ['js', 'jsx'],
-  setupFilesAfterEnv: ['./enzyme.setup.js'],
+  setupFilesAfterEnv: ['./setupJest.js', './setupEnzyme.js'],
   testEnvironment: 'jest-environment-jsdom-fourteen',
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',

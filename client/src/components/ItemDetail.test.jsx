@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { render } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
+
 import ItemDetail from './ItemDetail';
 
 const item = {
@@ -23,11 +24,13 @@ describe('ItemDetail', () => {
         <ItemDetail item={null} />
       </Suspense>,
     );
+
     expect(wrapper).toMatchSnapshot();
   });
 
   test('renders valid item without crashing', () => {
     const wrapper = render(<ItemDetail item={item} categoryName="men" />);
+
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
 });

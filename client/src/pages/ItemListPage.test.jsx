@@ -6,23 +6,24 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import ItemListPage, { useFetchItems } from './ItemListPage';
 
+const setRes = jest.fn();
+const fetchItemsSpy = jest.spyOn(require('../services'), 'fetchItems');
+
 describe('ItemListPage', () => {
-  const setRes = jest.fn();
-  const fetchItemsSpy = jest.spyOn(require('../services'), 'fetchItems');
   let wrapper;
 
   beforeEach(() => {
     fetchItemsSpy.mockReset();
   });
   test(`useFetchItems returns data`, async () => {
-    fetchItemsSpy.mockImplementation(
-      () =>
-        new Promise(resolve => {
-          resolve({ data: [] });
-        }),
+    fetchItemsSpy.mockResolvedValueOnce(
+      new Promise(resolve => {
+        resolve({ data: [] });
+      }),
     );
-    await renderHook(() => useFetchItems(setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItems(setRes));
       wrapper = shallow(<ItemListPage />);
     });
 
@@ -32,14 +33,14 @@ describe('ItemListPage', () => {
   });
 
   test(`useFetchItems returns error`, async () => {
-    fetchItemsSpy.mockImplementation(
-      () =>
-        new Promise(reject => {
-          reject({ err: 'Error!' });
-        }),
+    fetchItemsSpy.mockResolvedValueOnce(
+      new Promise(reject => {
+        reject({ err: 'Error!' });
+      }),
     );
-    await renderHook(() => useFetchItems(setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItems(setRes));
       wrapper = shallow(<ItemListPage />);
     });
 

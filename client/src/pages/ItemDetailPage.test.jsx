@@ -9,9 +9,10 @@ import ItemDetailPage, { useFetchItemById } from './ItemDetailPage';
 const mockParams = { id: 1 };
 jest.mock('react-router-dom', () => ({ useParams: () => mockParams }));
 
+const setRes = jest.fn();
+const fetchItemByIdSpy = jest.spyOn(require('../services'), 'fetchItemById');
+
 describe('ItemDetailPage', () => {
-  const setRes = jest.fn();
-  const fetchItemByIdSpy = jest.spyOn(require('../services'), 'fetchItemById');
   let wrapper;
 
   beforeEach(() => {
@@ -19,14 +20,14 @@ describe('ItemDetailPage', () => {
   });
 
   test(`useFetchItems returns data`, async () => {
-    fetchItemByIdSpy.mockImplementation(
-      () =>
-        new Promise(resolve => {
-          resolve({ category_id: 1 });
-        }),
+    fetchItemByIdSpy.mockResolvedValueOnce(
+      new Promise(resolve => {
+        resolve({ category_id: 1 });
+      }),
     );
-    await renderHook(() => useFetchItemById(1, setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItemById(1, setRes));
       wrapper = shallow(<ItemDetailPage />);
     });
 
@@ -36,14 +37,14 @@ describe('ItemDetailPage', () => {
   });
 
   test(`useFetchItems returns error`, async () => {
-    fetchItemByIdSpy.mockImplementation(
-      () =>
-        new Promise(reject => {
-          reject({ err: 'Error!' });
-        }),
+    fetchItemByIdSpy.mockResolvedValueOnce(
+      new Promise(reject => {
+        reject({ err: 'Error!' });
+      }),
     );
-    await renderHook(() => useFetchItemById(2, setRes));
+
     await act(async () => {
+      await renderHook(() => useFetchItemById(2, setRes));
       wrapper = shallow(<ItemDetailPage />);
     });
 
