@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBar renders without crashing 1`] = `
+<WithStyles(ForwardRef(Snackbar))
+  anchorOrigin={
+    Object {
+      "horizontal": "center",
+      "vertical": "top",
+    }
+  }
+  open={true}
+>
+  <WithStyles(ForwardRef(SnackbarContent))
+    message={
+      <ForwardRef(StyledComponent)
+        alignItems="center"
+        display="flex"
+      >
+        <UNDEFINED />
+        <span
+          style={
+            Object {
+              "marginLeft": 6,
+            }
+          }
+        >
+          mock message
+        </span>
+      </ForwardRef(StyledComponent)>
+    }
+    style={
+      Object {
+        "backgroundColor": "#e43",
+      }
+    }
+  />
+</WithStyles(ForwardRef(Snackbar))>
+`;

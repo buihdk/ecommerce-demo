@@ -6,7 +6,7 @@ import { Error } from '@material-ui/icons';
 const renderMessage = msg => (
   <Box display="flex" alignItems="center">
     <Error />
-    <span style={{ marginLeft: 4 }}>{msg}</span>
+    <span style={{ marginLeft: 6 }}>{msg}</span>
   </Box>
 );
 
