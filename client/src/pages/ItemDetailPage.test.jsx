@@ -20,11 +20,10 @@ describe('ItemDetailPage', () => {
   });
 
   test(`useFetchItems returns data`, async () => {
-    fetchItemByIdSpy.mockImplementation(
-      () =>
-        new Promise(resolve => {
-          resolve({ category_id: 1 });
-        }),
+    fetchItemByIdSpy.mockResolvedValueOnce(
+      new Promise(resolve => {
+        resolve({ category_id: 1 });
+      }),
     );
 
     await act(async () => {
@@ -38,11 +37,10 @@ describe('ItemDetailPage', () => {
   });
 
   test(`useFetchItems returns error`, async () => {
-    fetchItemByIdSpy.mockImplementation(
-      () =>
-        new Promise(reject => {
-          reject({ err: 'Error!' });
-        }),
+    fetchItemByIdSpy.mockResolvedValueOnce(
+      new Promise(reject => {
+        reject({ err: 'Error!' });
+      }),
     );
 
     await act(async () => {

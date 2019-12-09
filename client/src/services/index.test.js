@@ -38,7 +38,7 @@ describe('service fetchItemById', () => {
 
   test('should return error', () => {
     fetch.mockResolvedValueOnce(Promise.reject(new Error('mock error')));
-    fetchItemById(1).then(err =>
+    fetchItemById(0).then(err =>
       expect(err).toEqual({
         err:
           'Fetch problem: Error: mock error item by ID. Please check console and API server.',

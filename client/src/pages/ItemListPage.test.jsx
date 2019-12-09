@@ -16,11 +16,10 @@ describe('ItemListPage', () => {
     fetchItemsSpy.mockReset();
   });
   test(`useFetchItems returns data`, async () => {
-    fetchItemsSpy.mockImplementation(
-      () =>
-        new Promise(resolve => {
-          resolve({ data: [] });
-        }),
+    fetchItemsSpy.mockResolvedValueOnce(
+      new Promise(resolve => {
+        resolve({ data: [] });
+      }),
     );
 
     await act(async () => {
@@ -34,11 +33,10 @@ describe('ItemListPage', () => {
   });
 
   test(`useFetchItems returns error`, async () => {
-    fetchItemsSpy.mockImplementation(
-      () =>
-        new Promise(reject => {
-          reject({ err: 'Error!' });
-        }),
+    fetchItemsSpy.mockResolvedValueOnce(
+      new Promise(reject => {
+        reject({ err: 'Error!' });
+      }),
     );
 
     await act(async () => {

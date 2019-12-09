@@ -9,7 +9,7 @@ describe('localStorage', () => {
       setTimeout(() => {
         expect(setItemSpy).toBeCalledWith(CATEGORIES, '[]');
         done();
-      }, 50);
+      }, 0);
     });
   });
 
