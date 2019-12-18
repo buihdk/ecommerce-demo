@@ -96,14 +96,14 @@ const ItemDetail = ({ item, categoryName }) => {
         >
           <Box className={styles.chipWrapper}>
             <Chip
-              label="いいね!"
+              label="Like!"
               icon={<FavoriteBorder className={styles.icon} />}
             />
             <Box className={styles.count}>{item.like_count}</Box>
           </Box>
           <Box className={styles.chipWrapper}>
             <Chip
-              label="コメント"
+              label="Comment"
               icon={<ChatBubbleOutline className={styles.icon} />}
             />
             <Box className={styles.count}>{item.comment_count}</Box>
@@ -125,7 +125,7 @@ const ItemDetail = ({ item, categoryName }) => {
         </Typography>
         <Box className={styles.footer}>
           <Typography component="span" variant="h4">
-            {`¥ ${item.price}`}
+            {`$ ${item.price}`}
           </Typography>
           <Typography
             component="span"
@@ -138,7 +138,7 @@ const ItemDetail = ({ item, categoryName }) => {
             className={styles.footerCallToAction}
             display={{ xs: 'none', sm: 'block' }}
           >
-            カートに追加
+            Add to cart
           </Box>
         </Box>
       </Paper>

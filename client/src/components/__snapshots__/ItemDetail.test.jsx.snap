@@ -34,7 +34,7 @@ exports[`ItemDetail renders item with no image without crashing 1`] = `
               className="makeStyles-icon-3"
             />
           }
-          label="いいね!"
+          label="Like!"
         />
         <Styled(MuiBox)
           className="makeStyles-count-5"
@@ -51,7 +51,7 @@ exports[`ItemDetail renders item with no image without crashing 1`] = `
               className="makeStyles-icon-3"
             />
           }
-          label="コメント"
+          label="Comment"
         />
         <Styled(MuiBox)
           className="makeStyles-count-5"
@@ -90,7 +90,7 @@ exports[`ItemDetail renders item with no image without crashing 1`] = `
         component="span"
         variant="h4"
       >
-        ¥ 10
+        $ 10
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
@@ -112,7 +112,7 @@ exports[`ItemDetail renders item with no image without crashing 1`] = `
           }
         }
       >
-        カートに追加
+        Add to cart
       </Styled(MuiBox)>
     </Styled(MuiBox)>
   </WithStyles(ForwardRef(Paper))>
@@ -163,7 +163,7 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
               className="makeStyles-icon-3"
             />
           }
-          label="いいね!"
+          label="Like!"
         />
         <Styled(MuiBox)
           className="makeStyles-count-5"
@@ -180,7 +180,7 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
               className="makeStyles-icon-3"
             />
           }
-          label="コメント"
+          label="Comment"
         />
         <Styled(MuiBox)
           className="makeStyles-count-5"
@@ -219,7 +219,7 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
         component="span"
         variant="h4"
       >
-        ¥ 10
+        $ 10
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
@@ -241,7 +241,7 @@ exports[`ItemDetail renders valid item without crashing 1`] = `
           }
         }
       >
-        カートに追加
+        Add to cart
       </Styled(MuiBox)>
     </Styled(MuiBox)>
   </WithStyles(ForwardRef(Paper))>

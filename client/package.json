@@ -1,7 +1,7 @@
 {
-  "name": "client-app",
+  "name": "ecommerce-demo",
   "version": "1.0.0",
-  "description": "The app is created for the Mercari frontend skill test.",
+  "description": "Just a personal ecommerce project.",
   "main": "index.js",
   "author": "contact@buihdk.com",
   "license": "MIT",
