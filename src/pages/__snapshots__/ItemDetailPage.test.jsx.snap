@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetailPage useFetchItems returns data 1`] = `
+<Memo(ItemDetail)
+  item={Object {}}
+/>
+`;
+
+exports[`ItemDetailPage useFetchItems returns error 1`] = `
+<Memo(ItemDetail)
+  item={Object {}}
+/>
+`;

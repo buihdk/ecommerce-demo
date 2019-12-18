@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage renders 400 without crashing 1`] = `
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h1"
+  >
+    Error 400
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    gutterBottom={true}
+    variant="h6"
+  >
+    Item does not exist.
+  </WithStyles(ForwardRef(Typography))>
+  <span
+    aria-label="sad-faces"
+    className="makeStyles-emoji-2"
+    role="img"
+  >
+    😵😖😫
+  </span>
+  <WithStyles(ForwardRef(Button))
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Back to homepage
+  </WithStyles(ForwardRef(Button))>
+</Styled(MuiBox)>
+`;
+
+exports[`NotFoundPage renders 404 without crashing 1`] = `
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h1"
+  >
+    Error 404
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    gutterBottom={true}
+    variant="h6"
+  >
+    Page not found.
+  </WithStyles(ForwardRef(Typography))>
+  <span
+    aria-label="sad-faces"
+    className="makeStyles-emoji-2"
+    role="img"
+  >
+    😵😖😫
+  </span>
+  <WithStyles(ForwardRef(Button))
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Back to homepage
+  </WithStyles(ForwardRef(Button))>
+</Styled(MuiBox)>
+`;
+
+exports[`NotFoundPage renders bad request without crashing 1`] = `
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h1"
+  >
+    Error undefined
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    gutterBottom={true}
+    variant="h6"
+  >
+    Bad request.
+  </WithStyles(ForwardRef(Typography))>
+  <span
+    aria-label="sad-faces"
+    className="makeStyles-emoji-2"
+    role="img"
+  >
+    😵😖😫
+  </span>
+  <WithStyles(ForwardRef(Button))
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Back to homepage
+  </WithStyles(ForwardRef(Button))>
+</Styled(MuiBox)>
+`;

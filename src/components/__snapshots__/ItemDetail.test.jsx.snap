@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetail renders item with no image without crashing 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-container-1"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      variant="h6"
+    >
+      item 1
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(CardMedia))
+      className="makeStyles-media-2"
+      image="https://picsum.photos/id/0/400/400"
+    />
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Name: item 1
+    </WithStyles(ForwardRef(Typography))>
+    <Styled(MuiBox)
+      className="makeStyles-body-6"
+      display="flex"
+      justifyContent="space-between"
+    >
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+      >
+        <WithStyles(ForwardRef(Chip))
+          icon={
+            <UNDEFINED
+              className="makeStyles-icon-3"
+            />
+          }
+          label="Like!"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-count-5"
+        >
+          2
+        </Styled(MuiBox)>
+      </Styled(MuiBox)>
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+      >
+        <WithStyles(ForwardRef(Chip))
+          icon={
+            <UNDEFINED
+              className="makeStyles-icon-3"
+            />
+          }
+          label="Comment"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-count-5"
+        >
+          3
+        </Styled(MuiBox)>
+      </Styled(MuiBox)>
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+        display={
+          Object {
+            "sm": "block",
+            "xs": "none",
+          }
+        }
+      >
+        <WithStyles(ForwardRef(Avatar))>
+          <FlagIcon />
+        </WithStyles(ForwardRef(Avatar))>
+      </Styled(MuiBox)>
+    </Styled(MuiBox)>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Categories: baby
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Description: description 1
+    </WithStyles(ForwardRef(Typography))>
+    <Styled(MuiBox)
+      className="makeStyles-footer-7"
+    >
+      <WithStyles(ForwardRef(Typography))
+        component="span"
+        variant="h4"
+      >
+        $ 10
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Typography))
+        component="span"
+        style={
+          Object {
+            "marginLeft": 8,
+          }
+        }
+        variant="subtitle2"
+      >
+        free
+      </WithStyles(ForwardRef(Typography))>
+      <Styled(MuiBox)
+        className="makeStyles-footerCallToAction-8"
+        display={
+          Object {
+            "sm": "block",
+            "xs": "none",
+          }
+        }
+      >
+        Add to cart
+      </Styled(MuiBox)>
+    </Styled(MuiBox)>
+  </WithStyles(ForwardRef(Paper))>
+  <WithStyles(ForwardRef(Fab))
+    className="makeStyles-backBtn-9"
+    onClick={[Function]}
+    variant="extended"
+  >
+    <ArrowBackIosIcon />
+    Back
+  </WithStyles(ForwardRef(Fab))>
+</Fragment>
+`;
+
+exports[`ItemDetail renders null item without crashing 1`] = `ReactWrapper {}`;
+
+exports[`ItemDetail renders valid item without crashing 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-container-1"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      variant="h6"
+    >
+      item 1
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(CardMedia))
+      className="makeStyles-media-2"
+      image="1"
+    />
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Name: item 1
+    </WithStyles(ForwardRef(Typography))>
+    <Styled(MuiBox)
+      className="makeStyles-body-6"
+      display="flex"
+      justifyContent="space-between"
+    >
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+      >
+        <WithStyles(ForwardRef(Chip))
+          icon={
+            <UNDEFINED
+              className="makeStyles-icon-3"
+            />
+          }
+          label="Like!"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-count-5"
+        >
+          2
+        </Styled(MuiBox)>
+      </Styled(MuiBox)>
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+      >
+        <WithStyles(ForwardRef(Chip))
+          icon={
+            <UNDEFINED
+              className="makeStyles-icon-3"
+            />
+          }
+          label="Comment"
+        />
+        <Styled(MuiBox)
+          className="makeStyles-count-5"
+        >
+          3
+        </Styled(MuiBox)>
+      </Styled(MuiBox)>
+      <Styled(MuiBox)
+        className="makeStyles-chipWrapper-4"
+        display={
+          Object {
+            "sm": "block",
+            "xs": "none",
+          }
+        }
+      >
+        <WithStyles(ForwardRef(Avatar))>
+          <FlagIcon />
+        </WithStyles(ForwardRef(Avatar))>
+      </Styled(MuiBox)>
+    </Styled(MuiBox)>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Categories: men
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-body-6"
+    >
+      Description: description 1
+    </WithStyles(ForwardRef(Typography))>
+    <Styled(MuiBox)
+      className="makeStyles-footer-7"
+    >
+      <WithStyles(ForwardRef(Typography))
+        component="span"
+        variant="h4"
+      >
+        $ 10
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Typography))
+        component="span"
+        style={
+          Object {
+            "marginLeft": 8,
+          }
+        }
+        variant="subtitle2"
+      >
+        free
+      </WithStyles(ForwardRef(Typography))>
+      <Styled(MuiBox)
+        className="makeStyles-footerCallToAction-8"
+        display={
+          Object {
+            "sm": "block",
+            "xs": "none",
+          }
+        }
+      >
+        Add to cart
+      </Styled(MuiBox)>
+    </Styled(MuiBox)>
+  </WithStyles(ForwardRef(Paper))>
+  <WithStyles(ForwardRef(Fab))
+    className="makeStyles-backBtn-9"
+    onClick={[Function]}
+    variant="extended"
+  >
+    <ArrowBackIosIcon />
+    Back
+  </WithStyles(ForwardRef(Fab))>
+</Fragment>
+`;
